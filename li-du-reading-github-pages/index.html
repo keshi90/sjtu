@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="从李白诗中的月、山云、酒与江读起，再展开李杜两边的原诗。">
+  <title>李杜联读</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./data.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <a href="#top" class="wordmark">李杜联读</a>
+    <nav aria-label="页面导航"><a href="#imagery">李白意象</a><a href="#reading">双栏联读</a><a href="#method">数据说明</a></nav>
+  </header>
+  <main id="top">
+    <section class="intro" aria-labelledby="title">
+      <div>
+        <h1 id="title">李杜联读</h1>
+        <p>从李白诗中的月、山云、酒与江读起，再把两人的诗句放在一起，看看相近的字句各自照见了什么。</p>
+      </div>
+      <blockquote>秋月照白璧<span>寒月照白骨</span></blockquote>
+    </section>
+    <section id="imagery" aria-labelledby="imagery-title">
+      <div class="section-head"><h2 id="imagery-title">先读李白</h2><p id="corpus"></p></div>
+      <p class="lead">选一个意象，从具体诗句读起，体会李白怎样写山水、月色与酒意。</p>
+      <div id="themes" class="themes" role="group" aria-label="选择意象"></div>
+      <article class="essay" aria-live="polite">
+        <div><h3 id="essay-title"></h3><blockquote id="essay-line"></blockquote><p id="essay-source" class="muted"></p></div>
+        <div><p id="essay-text"></p><div id="stats" class="stats"></div><a href="#reading">与杜甫对读 ↓</a></div>
+      </article>
+    </section>
+    <section id="reading" aria-labelledby="reading-title">
+      <div class="section-head"><h2 id="reading-title">双栏联读</h2><p id="reading-theme"></p></div>
+      <div id="featured" class="featured" role="group" aria-label="精选配对"></div>
+      <article id="spread" aria-label="当前配对"></article>
+      <form id="browse" class="browse">
+        <label>搜索篇名或诗句<input id="query" type="search" placeholder="例如 明月、长江、北征"></label>
+        <label>浏览范围<select id="scope"><option value="theme">当前主题</option><option value="all">全部配对</option></select></label>
+        <button type="submit">查找配对</button>
+      </form>
+      <p id="results-count" class="muted" role="status"></p>
+      <div id="results"></div>
+      <div id="pager" class="pager" hidden><button id="previous" type="button">上一页</button><span id="page"></span><button id="next" type="button">下一页</button></div>
+    </section>
+    <section id="method" class="method">
+      <h2>数据说明</h2>
+      <p>诗句、篇名、上下文和相似度来自提供的李白、杜甫单人 CSV 与李杜配对 CSV。导读结合所选诗句及上下文撰写。</p>
+      <p>字词命中按独立诗句统计，同一条诗句含同一字词只计一次。不同字词的命中可能重叠。「月」含月份用法，「云」含言说用法。主题浏览按两侧诗句是否都命中该组字词筛选。相似度显示配对表 G 列原值。</p>
+    </section>
+    <noscript>请启用 JavaScript 以浏览诗句和配对。</noscript>
+  </main>
+  <footer>李杜联读</footer>
+</body>
+</html>
